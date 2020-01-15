@@ -1,0 +1,42 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load distance %}
+<section id="HotelDetail" class="HotelDetail">
+
+</section>  
+
+<template id="HotelTemplate" style="display:none">
+    <header class="HotelDetail-header">
+        <div class="container">
+            <span class="HotelDetail-header-col hostText">Sophie &amp; Adam</span>
+        </div>
+    </header>
+    <div class="container">
+        <div id="Hotel-clone-content"></div>
+    </div>
+    <section class="Hotel-section">
+        <div class="container">
+            <p class="Hotel-header">{% trans "Location" %}</p>
+            <div class="Hotel-map"></div>
+        </div>
+    </section>
+    <section class="Hotel-section">
+        <div class="container">
+            <p class="Hotel-header">{% trans "Reviews" %}</p>
+            <section id="HotelReviews">
+            </section>
+        </div>
+    </section>
+</template>
+
+<template id="ReviewsTemplate" style="display:none">
+    <div class="Hotel-review">
+        <div>
+            <p class="Hotel-review-name js-name"></p>
+            <div class="Hotels-rate JS-RATE"></div>
+        </div>
+        <div>
+            <p class="Hotel-review-text js-text"></p>
+        </div>
+    </div>
+</template>

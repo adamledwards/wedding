@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% block script %}{% endblock script %}
+{% load staticfiles %}
+{% block content %}
+
+<section class="Invite">
+    <div class="Section-header">
+        <span>Count</span>
+        <span><img src="{% static "title_flower.svg" %}" /></span>
+    </div>
+    <div class="container">
+        <div class="Invite-content">
+            <div>
+                <p>Adults Attending: {{ adultCount }}</p>
+                <p>Children Attending: {{ childCount }}</p>
+                <p>Not Attending: {{ notAttendingCount }}</p>
+                <p>Not Replied: {{ noReplyCount }}</p>
+            </div>
+            <table width="100%" style="margin-top: 50px;">
+             <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Status</th>
+            </tr>
+                {% for r in response %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ r.guest.first_name }} {{ r.guest.last_name}}</td>
+                        <td>{{ r.guest.is_child|yesno:"Child, Adult" }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</section>
+{% include './sections/footer.html' %}
+
+{% endblock content %}

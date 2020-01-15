@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block content %}
+{% include './sections/hero.html' %}
+<section class="Invite">
+    <div class="container">
+        <div class="Invite-content">
+            <img class="Invite-roses" src="{% static "roses.svg"%}"/>
+            <div class="Invite-guest">
+                <p>{{ object.first_name }} {{ object.last_name }}</p>
+                {% for guest in other_guest %}
+                    {% if forloop.last %}<p>{% trans "and" %}</p>{% endif %}
+                    <p>{{ guest.first_name }} {{ guest.last_name }}</p>
+                {% endfor %}
+            </div>
+            <p>We invite you to be<br> with us on our wedding day at an evening reception</p>
+        </div>
+    </div>
+</section>
+<section class="PhotoSection" id="JS-RECEPTION">
+    <img class="absoluteFill PhotoSection-bg" src="{% static "reception.jpg" %}" />
+    <div class="PhotoSection-filter absoluteFill"></div>
+    <div class="PhotoSection-content">
+        <div class="PhotoSection-header">
+            <span>{% trans "Reception" %}</span>
+            <span><img src="{% static "title_flower.svg" %}" /></span>
+        </div>
+        <div class="PhotoSection-text">
+            <p>{% trans "Reception / 18:30" %}</p>
+            <p>Little Tey Barn, Great Tey Road</p>
+            <p>Colchester, Essex</p>
+            <p><span class="numbers">CO6 1JA</span></p>
+        </div>
+    </div>
+</section>
+{% include './sections/footer.html' %}
+{% endblock content %}

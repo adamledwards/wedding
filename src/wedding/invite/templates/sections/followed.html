@@ -1,0 +1,11 @@
+{% load staticfiles %}
+{% load i18n %}
+<section class="PhotoSection followed" id="JS-FOLLOWED">
+    <img class="absoluteFill PhotoSection-bg" src="{% static "breakup.svg" %}" />
+    <div class="PhotoSection-content">
+        <div class="PhotoSection-text ">
+            {% get_current_language as LANGUAGE_CODE %}
+            <p class="hostText {% if LANGUAGE_CODE|slice:"0:2"  != 'en' %}de{% endif %}">{% trans "Followed by" %}</p>
+        </div>
+    </div>
+</section>

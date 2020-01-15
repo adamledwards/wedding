@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-25 21:40+0000\n"
+"PO-Revision-Date: 2019-02-16 13:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: wedding/invite/forms.py:12
+msgid "Response"
+msgstr "Antwort"
+
+#: wedding/invite/forms.py:13
+msgid "Will Attend"
+msgstr "wird teilnehmen"
+
+#: wedding/invite/forms.py:14
+msgid "Will Not Attend"
+msgstr "wird nicht teilnehmen"
+
+#: wedding/invite/forms.py:36
+msgid "Optional message to Sophie & Adam"
+msgstr "zusätzliche Nachricht für Sophie und Adam"
+
+#: wedding/invite/forms.py:47 wedding/invite/forms.py:59
+#: wedding/invite/forms.py:62
+msgid "Enter a valid phone number."
+msgstr "Bitte gib die gültige Nummer ein."
+
+#: wedding/invite/models.py:81
+msgid "Please submit a response"
+msgstr ""
+
+#: wedding/invite/templates/hotel_detail/index.html:19
+msgid "Location"
+msgstr "Ort"
+
+#: wedding/invite/templates/hotel_detail/index.html:25
+msgid "Reviews"
+msgstr "Bewertungen"
+
+#: wedding/invite/templates/not_found/index.html:9
+msgid "Did we invite you?"
+msgstr "Haben wir dich eingeladen?"
+
+#: wedding/invite/templates/not_found/index.html:16
+msgid "Enter your phone number to get your invite"
+msgstr "Gebe deine Nummer ein um deine Einladung zu erhalten. "
+
+#: wedding/invite/templates/not_found/index.html:23
+#: wedding/invite/templates/sections/rsvp.html:64
+msgid "Submit"
+msgstr "Senden"
+
+#: wedding/invite/templates/sections/church.html:8
+msgid "Ceremony"
+msgstr "Kirchliche Trauung"
+
+#: wedding/invite/templates/sections/church.html:12
+msgid "Ceremony / 13:00"
+msgstr "Kirchliche Trauung / 13:00"
+
+#: wedding/invite/templates/sections/followed.html:8
+msgid "Followed by"
+msgstr "anschließend..."
+
+#: wedding/invite/templates/sections/gifts.html:8
+#: wedding/invite/templates/sections/rsvp.html:15
+#: wedding/invite/templates/sections/rsvp.html:74
+msgid "Thank You"
+msgstr "Danke"
+
+#: wedding/invite/templates/sections/gifts.html:13
+msgid ""
+"The biggest gift you can give us is your attendance at the celebration of "
+"our marriage, however, should you wish to give a wedding gift, we would be "
+"more than happy to receive a donation towards our honeymoon."
+msgstr ""
+"Unser größtes Geschenk ist es, mit Euch zu feiern. Wenn Ihr uns trotzdem "
+"etwas schenken möchtet, würden wir uns freuen, wenn Ihr uns mit einem "
+"kleinen Beitrag zu unseren Flitterwochen unterstützt. "
+
+#: wedding/invite/templates/sections/gifts.html:14
+msgid "Best wishes"
+msgstr "Mit herzlichen Grüßen"
+
+#: wedding/invite/templates/sections/hotels.html:6
+msgid "Hotels"
+msgstr "Hotels"
+
+#: wedding/invite/templates/sections/hotels.html:20
+msgid "Address"
+msgstr "Adresse"
+
+#: wedding/invite/templates/sections/hotels.html:21
+msgid "Phone"
+msgstr "Telefon"
+
+#: wedding/invite/templates/sections/hotels.html:24
+#: wedding/invite/templates/sections/hotels.html:25
+msgid "from"
+msgstr "von"
+
+#: wedding/invite/templates/sections/hotels.html:28
+msgid "Show detail"
+msgstr "Details"
+
+#: wedding/invite/templates/sections/invite.html:10
+msgid "and"
+msgstr "und"
+
+#: wedding/invite/templates/sections/invite.html:14
+msgid "We invite you to be<br/> with us on our wedding day"
+msgid_plural "We invite you all to be<br/> with us on our wedding day"
+msgstr[0] "Wir laden dich ein,<br/> unsere Hochzeit mit uns zu feiern"
+msgstr[1] "Wir laden euch ein,<br/> unsere Hochzeit mit uns zu feiern"
+
+#: wedding/invite/templates/sections/reception.html:8
+msgid "Reception"
+msgstr "Hochzeits feier"
+
+#: wedding/invite/templates/sections/reception.html:12
+msgid "Reception / 14:30"
+msgstr "Hochzeits feier / 14:30"
+
+#: wedding/invite/templates/sections/rsvp.html:8
+msgid "RSVP"
+msgstr "RSVP"
+
+#: wedding/invite/templates/sections/rsvp.html:17
+msgid ""
+"Please RSVP by April <span class='numbers'>1</span>st <span "
+"class='numbers'>2019</span>"
+msgstr ""
+"Bitte um Rückantwort bis zum <span class=‘numbers’>1</span>. April <span "
+"class=‘numbers’>2019</span>"
+
+#: wedding/invite/templates/sections/rsvp.html:23
+msgid "Have received your RSVP"
+msgid_plural "Have received your RSVP"
+msgstr[0] "Haben deine Antwort erhalten"
+msgstr[1] "Haben eure Antwort erhalten"
+
+#: wedding/invite/templates/sections/rsvp.html:26
+msgid "Please let us know if all the guest will be attending"
+msgstr "Bitte teilt uns mit ob alle kommen"
+
+#~ msgid "Please RSVP by April 1st 2019"
+#~ msgstr "Bitte gebt bis zum 01.04.2019 Bescheid. "

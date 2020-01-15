@@ -1,0 +1,75 @@
+{% load i18n %}
+{% load staticfiles %}  
+<section class="RSVP" >
+    <div class="container">
+        <div class="Section-break"></div>
+    </div>
+    <div class="Section-header">
+        <span>{% trans "RSVP" %}</span>
+        <span><img src="{% static "title_flower.svg" %}" /></span>
+    </div>
+    <div class="container">
+        <div class="RSVP-content">
+            <p class="RSVP-header">
+            {% if rsvp.submitted %}
+                {% trans "Thank You" %}
+            {% else %}
+                {% blocktrans %}Please RSVP by April <span class='numbers'>1</span>st <span class='numbers'>2019</span>{% endblocktrans %}
+            {% endif %}
+            </p>
+            <div class="RSVP-confirmation {{rsvp.submitted|yesno:"submitted, "}}"> 
+                <img class="Invite-roses" src="{% static "roses.svg"%}"/>
+                <p class="hostText">Sophie &amp; Adam</p>
+                <p>{% blocktrans count counter=rsvp.form|length %}Have received your RSVP{% plural %}Have received your RSVP{% endblocktrans %}</p>
+            </div>
+            <div class="RSVP-error"> 
+                <p>{% trans "Please let us know if all the guest will be attending" %}</p>
+            </div>
+            <form method="post" id="RSVP-form" class="{{rsvp.submitted|yesno:"submitted, "}}">
+               <fieldset {{rsvp.submitted|yesno:"disabled,"}}>
+                {% csrf_token %}
+                <div class="RSVP-select-options">
+                    {% for form in rsvp.form %}
+                        {% for field in form.get_response_fields %}
+                            <div class="js-form-{{form.prefix}}">
+                                <div class="RSVP-field {{ field.value }}">
+                                    <div class="RSVP-field-text">
+                                        <svg class="yes" viewbox="0 0 21 21" width="100%" height="100%" version="1" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M-2-2h24v24H-2z"/><path class="path" d="M10 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM8 15l-5-5 1-1 4 3 8-7 1 1-9 9z"  fill-rule="nonzero"/></g></svg>
+                                        <svg class="no" viewbox="0 0 21 21" width="100%" height="100%" version="1" xmlns="http://www.w3.org/2000/svg"><path class="path" d="M10 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm5 11H5V9h10v2z" fill-rule="nonzero"/></svg>
+                                    </div>
+                                    {% if form.instance.guest %}
+                                        <div class="RSVP-field-name">{{form.instance.guest}}</div>
+                                    {% else %}
+                                        <div class="RSVP-field-name">{{form.initial.guest}}</div>
+                                    {% endif %}
+                                    <div class="RSVP-select js-select">{{ field }}</div>
+                                </div>  
+                            </div>      
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+                {% for form in rsvp.form %}
+                    {% for field in form.get_message_fields %}
+                        {{field.as_hidden}}
+                        {% if form.instance.guest.pk == object.pk or form.initial.guest.pk == object.pk %}
+                        <div class="RSVP-field js-rsvp-message">
+                            <div class="RSVP-message">{{ field }}</div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                    {{form.guest.as_hidden}}
+                {% endfor %}
+                    <div class="RSVP-field js-rsvp-submit">
+                        <div class="RSVP-field-submit">
+                            <button class="RSVP-submit">{% trans "Submit" %}</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div> 
+</section>
+<script>
+ window.sophieAdamWedding = {};
+ window.sophieAdamWedding.thanks = '{% trans "Thank You" %}';
+</script>

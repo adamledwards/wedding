@@ -1,0 +1,18 @@
+{% load staticfiles %}
+{% load i18n %}
+<section class="PhotoSection" id="JS-RECEPTION">
+    <img class="absoluteFill PhotoSection-bg" src="{% static "reception.jpg" %}" />
+    <div class="PhotoSection-filter absoluteFill"></div>
+    <div class="PhotoSection-content">
+        <div class="PhotoSection-header">
+            <span>{% trans "Reception" %}</span>
+            <span><img src="{% static "title_flower.svg" %}" /></span>
+        </div>
+        <div class="PhotoSection-text">
+            <p>{% trans "Reception / 14:30" %}</p>
+            <p>Little Tey Barn, Great Tey Road</p>
+            <p>Colchester, Essex</p>
+            <p><span class="numbers">CO6 1JA</span></p>
+        </div>
+    </div>
+</section>

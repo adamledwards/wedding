@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block script %} 
+      <script src="{% static "js/table.js"%}"></script>
+{% endblock script %}
+
+{% block content %}
+<div class="TablePlannerWrapper">
+<div class="Section-header">
+        <span>Table Planner</span>
+        <span><img src="{% static "title_flower.svg" %}" /></span>
+</div>
+
+<section class="TablePlannerTabs">
+    <a class="RSVP-submit active" data-index="0">all</a>
+    {% for t in tables %}
+        <a class="RSVP-submit" data-index="{{forloop.counter}}">{{t.name}}</a>
+    {% endfor %}
+</section>
+<form action="" id="tableName" class="tableNameForm">
+    <input type="text" name="name" required/>
+    <input type="hidden" name="action" value="table" />
+
+    <button>Add Table</button>
+</form>
+<section class="TablePlanner">
+    <div class="sidepanel">
+        <input type="text" name="filter" placeholder="Filter" />
+        <div class="guestList">
+        {% for r in response %}
+            <div class="guest" data-id="{{r.guest.pk}}" draggable="true">{{ r.guest.first_name }} {{ r.guest.last_name}}</div>
+        {% endfor %}
+        </div>
+    </div>
+    <div class="mainWrapper">
+        <div class="main">
+            {% for t in tables %}
+            <div class="table" data-id="{{t.pk}}">
+                <div class="table-content">
+                    <div class="header">{{t.name}}</div>
+                    <ul>
+                        {% for seat in t.tableguest_set.all %}
+                        <li class="seat" data-id="{{seat.pk}}"><span>{{forloop.counter}}. {{ seat.guest }}</span> 
+                        <span class="js-remove-guest remove-guest">❌</span>
+                        </li>
+                        {% empty %}
+                        <li></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="TablePlannerTabs">
+    <a class="RSVP-submit" href="export">Download name cards</a>
+</section>
+</div>
+{% endblock content %}

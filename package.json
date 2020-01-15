@@ -1,0 +1,53 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "assets builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postcss": "postcss src/assets/css/index.css --output src/wedding/invite/static/css/style.css --watch  --verbose",
+    "livereload": "livereload src/wedding/invite/static/css/",
+    "dev": "concurrently -n css,livereload \"npm:postcss\" \"npm:livereload\" \"npm:buildDevJS\"",
+    "buildDevJS": "webpack --watch --mode development",
+    "build": "webpack --mode production && postcss src/assets/css/index.css --env production --output src/wedding/invite/static/css/style.css "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/googlemaps": "^3.30.16",
+    "@types/gsap": "^1.20.0",
+    "autoprefixer": "^9.4.3",
+    "body-scroll-lock": "^2.6.1",
+    "concurrently": "^4.1.0",
+    "cssnano": "^4.1.8",
+    "events-polyfill": "^2.1.0",
+    "gsap": "^2.0.2",
+    "history": "^4.7.2",
+    "livereload": "^0.7.0",
+    "lost": "^8.3.0",
+    "path-to-regexp": "^3.0.0",
+    "postcss-cli": "^6.1.0",
+    "postcss-color-function": "^4.0.1",
+    "postcss-font-magician": "^2.2.1",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.1.1",
+    "postcss-preset-env": "^6.5.0",
+    "prefix": "^1.0.0",
+    "scroll-restoration-polyfill": "^0.6.1",
+    "webpack": "^4.28.3",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.1.0",
+    "babel-loader": "^8.0.5",
+    "typescript": "^3.2.2",
+    "webpack-cli": "^3.2.0"
+  },
+  "browserslist": "> 0.25%, not dead, iOS 8"
+}

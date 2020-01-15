@@ -1,0 +1,40 @@
+.Invite-content {
+  font-size: 1.875em;
+  text-align: center;
+  lost-column: 8/12;
+  lost-offset: 2/12;
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  background: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
+  padding: 2.66em;
+
+  box-sizing: border-box;
+  @media all and (max-width: 700px) { 
+    lost-column: 12/12;
+    lost-offset: 0/12;
+    padding: 1.125em;
+  }
+
+  @media all and (max-width: 768px) {
+    font-size: 1.4375em;
+  }
+}
+
+.Invite-content {
+  p {
+    margin: 1.5em 0 0 0;
+  }
+}
+
+.Invite-roses {
+  width: 4.25em;
+  display: block;
+  margin: 0 auto;
+}
+
+.Invite-guest {
+  p {
+    margin: 0.5em 0;
+  }
+}

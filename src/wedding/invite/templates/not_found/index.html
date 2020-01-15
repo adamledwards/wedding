@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block script %}{% endblock script %}
+{% block content %}
+<section class="Invite">
+    <div class="Section-header">
+        <span>{% trans "Did we invite you?" %}</span>
+        <span><img src="{% static "title_flower.svg" %}" /></span>
+    </div>
+    <div class="container">
+        <div class="Invite-content">
+            <img class="Invite-roses" src="{% static "roses.svg"%}"/>
+            <div class="Invite-guest">
+                <p>{% blocktrans %}Enter your phone number to get your invite{% endblocktrans %}</p>
+            </div>
+            <form action="" method="post" class="phone-form">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {{ form.phone.errors }}
+                {{ form.phone }}
+                <input type="submit" value="{% trans "Submit" %}" class="RSVP-submit" />
+            </form>
+        </div>
+    </div>
+</section>
+{% include '../sections/footer.html'     %}
+{% endblock content %}

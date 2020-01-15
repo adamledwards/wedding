@@ -1,0 +1,52 @@
+.Hotels {
+    margin-top: 3.125em;
+}
+.Hotels-content {
+    lost-flex-container: row; 
+    margin-top: 3.125em;
+}
+.Hotels-col {
+    lost-column: 12/12;
+    @media all and (min-width: 768px) { 
+        lost-column: 6/12;   
+    }
+    & img {
+        display: block;
+    }
+}
+
+.Hotels-title {
+    margin-top: 1em;
+    display: block;    
+    font-size: 1.875em;
+    @media all and (min-width: 768px) { 
+        
+        line-height: 1;    
+        margin-top: 0em;
+    }
+}
+
+.Hotels-content {
+    font-family: 'Playfair Display';
+}
+
+.Hotels-description {
+    line-height: 1.5;
+    margin-top: 1em;
+}
+
+.Hotels-rate {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5em;
+    & svg {
+        margin: 0 0 0 1em;
+    }
+}
+
+.Hotels-link {
+    margin-top: 1em; 
+    color: #000;
+    display: block;
+    transition: opacity 200ms ease;
+}

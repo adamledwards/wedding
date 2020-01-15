@@ -1,0 +1,17 @@
+{% load i18n %}
+{% load staticfiles %}
+<section class="Invite">
+    <div class="container">
+        <div class="Invite-content">
+            <img class="Invite-roses" src="{% static "roses.svg"%}"/>
+            <div class="Invite-guest">
+                <p>{{ object.first_name }} {{ object.last_name }}</p>
+                {% for guest in other_guest %}
+                    {% if forloop.last %}<p>{% trans "and" %}</p>{% endif %}
+                    <p>{{ guest.first_name }} {{ guest.last_name }}</p>
+                {% endfor %}
+            </div>
+            <p>{% blocktrans count counter=other_guest|length|add:1 %}We invite you to be<br/> with us on our wedding day{% plural %}We invite you all to be<br/> with us on our wedding day{% endblocktrans %}</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load distance %}
+<section class="Hotels">
+    <div class="Section-header">
+        <span>{% trans "Hotels" %}</span>
+        <span><img src="{% static "title_flower.svg" %}" /></span>
+    </div>
+    <div class="container">
+        {% for hotel in hotels %}
+            <div class="Section-break"></div>
+            <div class="Hotels-content js-hotels" data-id="{{hotel.place_id}}">
+                <div class="Hotels-col">
+                    <img src="{{ hotel.image.url }}" />
+                </div>
+                <div class="Hotels-col">
+                    <span class="Hotels-title js-hotel-title">{{ hotel.name }}</span>
+                    <div class="Hotels-rate JS-RATE"></div>
+                    <div class="Hotels-description">
+                        <p>{% trans "Address"%}: {{ hotel.address_line_1 }}, {% if hotel.address_line_2 %}{{ hotel.address_line_2 }},{% endif %} {{ hotel.city }} <span class="numbers">{{ hotel.post_code }}</span></p>
+                        <p>{% trans "Phone"%}: <span class="numbers">{{ hotel.phone_number }}</span></p>
+                    </div>
+                    <div class="Hotels-description">
+                        <p>{% locale_distance hotel.church_distance %} ({{ hotel.church_duration|seconds_to_minutes  }} min) {% trans "from"%} St Peter ad Vincula, Church</p>
+                        <p>{% locale_distance hotel.reception_distance %} ({{ hotel.reception_duration|seconds_to_minutes }} min) {% trans "from"%} Little Tey Barn</p>
+                    </div>
+                    <p>
+                        <a href="hotel/{{hotel.place_id}}/" data-pathname="hotel/{{hotel.place_id}}/" class="Hotels-link js-hotel-detail">{% trans "Show detail"%}</a>
+                    </p>
+                    <div class="js-google-places"></div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <span class="Hotel-bg"/>
+</section>

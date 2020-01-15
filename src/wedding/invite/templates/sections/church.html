@@ -1,0 +1,18 @@
+{% load staticfiles %}
+{% load i18n %}
+<section class="PhotoSection" id="JS-CHURCH">
+    <img class="absoluteFill PhotoSection-bg" src="{% static "church.jpg" %}" />
+    <div class="PhotoSection-filter absoluteFill"></div>
+    <div class="PhotoSection-content">
+        <div class="PhotoSection-header">
+            <span>{% trans "Ceremony" %}</span>
+            <span><img src="{% static "title_flower.svg" %}" /></span>
+        </div>
+        <div class="PhotoSection-text">
+            <p>{% trans "Ceremony / 13:00" %}</p>
+            <p>St Peter ad Vincula, <span class="numbers">4</span> Church Street</p>
+            <p>Coggeshall, Essex</p>
+            <p><span class="numbers">CO6 1UD</span></p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sophie &amp; Adam 2019</title>
+    <link href="{% static "css/style.css"%}" rel="stylesheet" type="text/css">
+    {% block script %} 
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&amp;libraries=places"></script>
+      <script src="{% static "js/index.js"%}"></script>
+    {% endblock script %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="inner-body">
+      {% block content %} {% endblock content %}
+    </div>
+  </body>
+</html>
+

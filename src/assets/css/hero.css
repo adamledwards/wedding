@@ -1,0 +1,65 @@
+.Hero {
+  position: relative;
+  color: #000;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    
+    padding-top: 129.333%;
+    background-image: url('../hero-small.jpg');
+    background-size: cover;
+  }
+  @media all and (min-width: 768px) { 
+    &:before {
+      padding-top: 59.72222222%;
+      background-image: url('../hero2.jpg');
+    }
+  }
+
+  .hostText {
+    font-size: 3.125em;
+    padding: 0.2em 0;
+    @media all and (max-width: 768px) {
+      font-size: 1.8em;
+    }
+  }
+}
+
+.Hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.Hero-content .container {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Hero-date {
+  font-size: 1.875em;
+  text-transform: uppercase;
+  margin: 0 0 0 0;
+  
+
+  @media all and (max-width: 768px) {
+    font-size: 1.4375em;
+  }
+  
+}
+
+.Hero-flower {
+  width: 50%;
+  @media all and (min-width: 768px) { 
+    width: initial;
+    
+  }
+  margin: 1em 0 1.6875em 0;
+}

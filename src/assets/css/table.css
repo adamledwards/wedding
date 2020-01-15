@@ -1,0 +1,86 @@
+.TablePlannerWrapper {
+    padding: 30px;
+}
+.TablePlanner {
+    display: flex;
+    flex-direction: row;
+}
+
+.TablePlanner .guest {
+    margin: 10px 0  ;
+}
+
+.TablePlanner .main {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.TablePlanner .main.zoom {
+    flex-wrap: nowrap;
+    transition: transform 300ms ease;
+}
+
+.mainWrapper {
+    flex: 1;
+    overflow: hidden;
+}
+
+.TablePlanner .main.zoom .table{
+    flex-shrink: 0;   
+    width: 100%;
+}
+
+.TablePlanner .table {
+    width: 33%;
+    padding: 10px;
+    
+}
+
+.table-content {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.24);
+}
+
+.table-content .header {
+    text-align: center
+}
+
+.table-content li{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.js-remove-guest {
+    cursor: pointer;
+}
+
+.TablePlannerTabs {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.TablePlannerTabs a {
+    padding: 10px;
+    background: #9B9B9B;
+    margin-right: 5px;
+}
+
+.TablePlannerTabs a.active {
+    padding: 10px;
+    background: #BB946A;
+}
+
+.tableNameForm {
+    margin-bottom: 50px;
+}
+
+.TablePlanner .sidepanel {
+    position: sticky;
+    top: 0;
+    height: 100%;
+    width: 20%;
+}

@@ -1,0 +1,39 @@
+@lost gutter 32px;
+@lost flexbox flex;
+@lost cycle none;
+@lost clearing left;
+@lost rounder 100;
+
+:root {
+  --desktop-hd: 1040px;
+  --desktop: 900px;
+}
+
+body {
+  background-color: #f6f6f4;
+  -webkit-overflow-scrolling: touch;
+}
+
+.inner-body {
+  width: 100%;
+}
+.Section-header,
+.container {
+  margin: 0 auto;
+  width: var(--desktop-hd);
+  @media all and (max-width: 1040px) { 
+    width: 90%;
+  } 
+}
+
+.Section-break {
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(-270deg, rgba(231,171,171,0.00) 0%, #BB946A 15%, #BB946A 86%, rgba(187,148,106,0.00) 100%); 
+  margin: 5em 0;
+}
+
+input.phone {
+  padding: 10px;
+  font-size: 0.5em;
+}

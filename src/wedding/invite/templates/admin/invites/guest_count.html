@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% block script %}{% endblock script %}
+{% block content %}
+<section class="Invite">
+    <div class="Section-header">
+        <span>Guests</span>
+        <span><img src="{% static "title_flower.svg" %}" /></span>
+    </div>
+    <div class="container">
+        <div>
+            <div>Name</div>
+            <div>Response</div>
+            <div>Message</div>
+            <div>Delivery Status</div>
+        </div>
+        <div>
+            <div>Name</div>
+            <div>Response</div>
+            <div>Message</div>
+            <div>Delivery Status</div>
+        </div>
+    </div>
+</section>
+{% include '../sections/footer.html'     %}
+{% endblock content %}

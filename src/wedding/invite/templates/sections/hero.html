@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load staticfiles %}
+<section class="Hero">
+    <div class="Hero-content">
+        <div class="container">
+            <h1 class="hostText">Sophie &amp; Adam</h2>
+                {% get_current_language as LANGUAGE_CODE %}
+                {% if LANGUAGE_CODE|slice:"0:2" == "en" %}
+                    <span class="Hero-date numbers">{{ wedding_date|date:"F jS Y" }}</span>
+                {% else %}
+                    <span class="Hero-date numbers">{{ wedding_date|date:"j. F Y" }}</span>
+                {% endif %}
+            <img class="Hero-flower" src="{% static "header_flower.svg"%}"/>
+        </div>
+    </div>
+</section>

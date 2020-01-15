@@ -1,0 +1,83 @@
+
+.HotelDetail {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    display: none;
+    font-family: 'Playfair Display';
+    z-index: 2;
+    &.show {
+        display: block;
+    }
+    
+}
+
+.Hotel-bg {
+    display: block;
+    position: fixed;
+    width: 100%;
+    background-color: #f6f6f4;
+    height: 1px;
+    transform: scaleY(0);
+    top:0;
+    z-index: 2;
+}
+
+.Hotel-map {
+    height: 350px;
+    display: flex;
+    div {
+        flex: 1;
+    }
+}
+
+.Hotel-header {
+    font-size: 1.875em;
+    margin-bottom: 1em;
+}
+
+.Hotel-section {
+    margin-top: 3.125em;
+}
+
+.Hotel-review-name {
+    font-size: 1.5em;
+}
+.Hotel-review-text {
+    line-height: 1.5;
+    margin-top: 1em; 
+}
+
+.Hotel-review {
+    margin-bottom: 2.8125em;
+}
+
+.HotelDetail-header {
+    background: #BB946A;
+    color: #fff;
+    font-family: 'Playfair Display SC';
+    .container {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
+
+.HotelDetail-header-col {
+    text-align: center;
+}
+
+#HotelCloneTitle {
+    text-align: center;
+}
+
+.HotelDetail .Hotels-link {
+    opacity: 0;
+}

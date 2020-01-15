@@ -1,0 +1,18 @@
+{% load i18n %}
+{% load staticfiles %}
+<section class="Gifts">
+    <div class="container">
+        <div class="Section-break"></div>
+    </div>
+    <div class="Section-header">
+        <span>{% trans "Thank You" %}</span>
+        <span><img src="{% static "title_flower.svg" %}" /></span>
+    </div>
+    <div class="container">
+        <div class="Gifts-content">
+        <p>{% blocktrans %}The biggest gift you can give us is your attendance at the celebration of our marriage, however, should you wish to give a wedding gift, we would be more than happy to receive a donation towards our honeymoon.{% endblocktrans %}</p>
+        <p>{% trans "Best wishes" %},</p>
+        <p><span class="hostText">Sophie &amp; Adam</span></p>
+        </div>
+    </div>
+</section>
