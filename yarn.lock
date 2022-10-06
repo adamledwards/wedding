@@ -2667,12 +2667,12 @@ globby@^8.0.0:
     pify "^3.0.0"
     slash "^1.0.0"
 
-google-fonts-complete@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/google-fonts-complete/-/google-fonts-complete-1.2.2.tgz#3ad95d4022a2f278acc41d4539b33a2899e8f76c"
-  integrity sha512-SBRwK46kHYD27qSxNYdOlxv0pFs/o6BervcLRC3dY8BPoizE1FnGc3wRcXbtTUi/V7zAdZMBfnfP4db3Z4adUw==
+google-fonts-complete@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/google-fonts-complete/-/google-fonts-complete-2.1.1.tgz#07ff198f821e16ea68f99a7c058f5ed3ad94f86c"
+  integrity sha512-6e7jXyadmW4iHrrmYitcsoyVpcymjndBsgXLeo0XXXbAqU9xhM06OxxJAiPqSrp9Xn2bvBueOTe091lwkKVc1g==
   dependencies:
-    postcss "^4.1.16"
+    postcss "^7.0.18"
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.15"
@@ -3455,13 +3455,12 @@ loose-envify@^1.0.0, loose-envify@^1.2.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lost@^8.3.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/lost/-/lost-8.3.0.tgz#adaa8f82b04c99222503a08dfc11d01fe664645d"
-  integrity sha512-h4BXPASLxT4VmohhCFF5pKk/Vlj1mtV7TQNNsBsV2GC+7TtuJYkx3UgOmH9/CcqDDojlpiS4Qq7SO3mfmEcUdw==
+lost@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/lost/-/lost-9.0.1.tgz#a3d89e4d50fe7ea3a50021569e110da41470a423"
+  integrity sha512-/LmgC9pSYB/exL/tG++5QzdcJra0EFezOukGT+Fe4wYJIw477pFqmNaTZlwL7lD751mkGvMg9ef4ktrhG0ojRg==
   dependencies:
-    object-assign "^4.1.0"
-    postcss "^6.0.6"
+    object-assign "^4.1.1"
 
 lru-cache@^5.1.1:
   version "5.1.1"
@@ -3871,7 +3870,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-object-assign@^4.0.1, object-assign@^4.1.0:
+object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
@@ -4160,6 +4159,11 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+picocolors@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-0.2.1.tgz#570670f793646851d1ba135996962abad587859f"
+  integrity sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA==
+
 pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -4390,15 +4394,15 @@ postcss-focus-within@^3.0.0:
   dependencies:
     postcss "^7.0.2"
 
-postcss-font-magician@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/postcss-font-magician/-/postcss-font-magician-2.2.1.tgz#ea07124f5fd5548f8a8cd097f5f43e476a91c803"
-  integrity sha512-gSaHBGoexcyZ3wLnJ1LG9ZCygSzkh6PCOWhRJajcPW71nGplK4Y9H+s3WyOJeY1fBlnwXM0W8hlVcDew5LMvlA==
+postcss-font-magician@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/postcss-font-magician/-/postcss-font-magician-2.3.1.tgz#8dba68bcfc09f6801a3dbb616273cb62a91c5e31"
+  integrity sha512-2zTGmrNKyFkRtHW5Pg6lMpsCdUTBLqvNUVr+aJozQ7ZC0TljO4JvreQMYyjad/nErUfUiDHK8zMKqN4EtOEOFQ==
   dependencies:
     bootstrap-fonts-complete "^1.0.0"
     directory-fonts-complete "^1.2.0"
-    google-fonts-complete "^1.2.2"
-    postcss "^6.0.22"
+    google-fonts-complete "^2.1.0"
+    postcss "^7.0.21"
 
 postcss-font-variant@^4.0.0:
   version "4.0.0"
@@ -4839,7 +4843,7 @@ postcss@^4.1.16:
     js-base64 "~2.1.8"
     source-map "~0.4.2"
 
-postcss@^6.0.1, postcss@^6.0.22, postcss@^6.0.6:
+postcss@^6.0.1:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
   integrity sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==
@@ -4848,14 +4852,13 @@ postcss@^6.0.1, postcss@^6.0.22, postcss@^6.0.6:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.2, postcss@^7.0.5, postcss@^7.0.6, postcss@^7.0.7:
-  version "7.0.7"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.7.tgz#2754d073f77acb4ef08f1235c36c5721a7201614"
-  integrity sha512-HThWSJEPkupqew2fnuQMEI2YcTj/8gMV3n80cMdJsKxfIh5tHf7nM5JigNX6LxVMqo6zkgQNAI88hyFvBk41Pg==
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.18, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.5, postcss@^7.0.6, postcss@^7.0.7:
+  version "7.0.39"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.39.tgz#9624375d965630e2e1f2c02a935c82a59cb48309"
+  integrity sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==
   dependencies:
-    chalk "^2.4.1"
+    picocolors "^0.2.1"
     source-map "^0.6.1"
-    supports-color "^5.5.0"
 
 prefix@^1.0.0:
   version "1.0.0"
