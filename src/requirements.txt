@@ -4,4 +4,4 @@ Pillow==6.2.0
 requests==2.21.0
 twilio==6.23.1
 gunicorn
-django-debug-toolbar==1.11
+django-debug-toolbar==1.11.1
