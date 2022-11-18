@@ -23,7 +23,7 @@
     "events-polyfill": "^2.1.0",
     "gsap": "^3.6.0",
     "history": "^4.7.2",
-    "livereload": "^0.7.0",
+    "livereload": "^0.9.3",
     "lost": "^8.3.0",
     "path-to-regexp": "^3.0.0",
     "postcss-cli": "^6.1.0",
